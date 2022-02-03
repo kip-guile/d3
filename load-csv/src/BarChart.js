@@ -58,6 +58,7 @@ function BarChart() {
           yScale={yScale}
           yValue={yValue}
           xValue={xValue}
+          toolTipFormat={xAxisTickFormat}
         />
       </g>
     </svg>

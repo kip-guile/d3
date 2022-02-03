@@ -1,4 +1,4 @@
-const Marks = ({ data, xScale, yScale, yValue, xValue }) =>
+const Marks = ({ data, xScale, yScale, yValue, xValue, toolTipFormat }) =>
   data.map((d) => (
     <rect
       className='mark'
@@ -7,7 +7,9 @@ const Marks = ({ data, xScale, yScale, yValue, xValue }) =>
       y={yScale(yValue(d))}
       width={xScale(xValue(d))}
       height={yScale.bandwidth()}
-    />
+    >
+      <title>{toolTipFormat(xValue(d))}</title>
+    </rect>
   ))
 
 export default Marks
