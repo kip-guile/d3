@@ -1,4 +1,4 @@
-const AxisLeft = ({ yScale, innerHeight }) => {
+const ScatterPlotAxisLeft = ({ yScale, innerHeight }) => {
   return yScale.domain().map((tickValue) => (
     <g className='tick'>
       <text
@@ -14,4 +14,4 @@ const AxisLeft = ({ yScale, innerHeight }) => {
   ))
 }
 
-export default AxisLeft
+export default ScatterPlotAxisLeft
